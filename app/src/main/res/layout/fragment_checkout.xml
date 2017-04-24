@@ -1,0 +1,187 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    tools:context="com.gmcardoso.prontoshop.ui.checkout.CheckoutFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/margin_padding_tiny"
+        android:paddingRight="@dimen/margin_padding_tiny">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/checkout_list_recyclerview"
+            android:background="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"/>
+
+        <TextView
+            android:id="@+id/empty_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/no_customer_found"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:padding="@dimen/margin_padding_normal"
+            android:textStyle="italic"
+            android:visibility="gone"
+            android:textColor="@color/primary"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:text="@string/label_sub_total" />
+
+            <TextView
+                android:id="@+id/text_view_sub_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="right"
+                android:paddingRight="@dimen/margin_padding_tiny"
+                android:text="@string/label_zero_dollar" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:text="@string/label_tax" />
+
+            <TextView
+                android:id="@+id/text_view_tax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="right"
+                android:paddingRight="@dimen/margin_padding_tiny"
+                android:text="@string/label_zero_dollar" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:text="@string/label_total" />
+
+            <TextView
+                android:id="@+id/text_view_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="right"
+                android:paddingRight="@dimen/margin_padding_tiny"
+                android:text="@string/label_zero_dollar" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/radio_group_payment_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="@dimen/margin_padding_tiny"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio_button_cash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:checked="true"
+            android:text="@string/payment_type_cash"
+            android:textAllCaps="true"/>
+
+        <RadioButton
+            android:id="@+id/radio_button_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:checked="false"
+            android:text="@string/payment_type_card"
+            android:textAllCaps="true"/>
+
+        <RadioButton
+            android:id="@+id/radio_button_paypal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:checked="false"
+            android:text="@string/payment_type_paypal"
+            android:textAllCaps="true"/>
+    </RadioGroup>
+
+    <LinearLayout
+        style="@style/ButtonBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/margin_padding_tiny"
+        android:layout_marginTop="@dimen/margin_padding_tiny"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/clear_cart_button"
+            style="@style/BottomBarButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/label_clear"/>
+
+        <View
+            android:layout_width="@dimen/margin_padding_small"
+            android:layout_height="@dimen/dividerHeight"
+            android:background="@android:color/transparent" />
+
+        <Button
+            android:id="@+id/checkout_cart_button"
+            style="@style/BottomBarButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/label_checkout"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>
