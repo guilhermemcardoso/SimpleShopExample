@@ -15,4 +15,6 @@
     <string name="label_clear">Clear</string>
     <string name="label_checkout">Checkout</string>
     <string name="label_category">Category</string>
+    <string name="label_product_name">Product Name</string>
+    <string name="product_description">Product Image</string>
 </resources>

@@ -18,14 +18,14 @@
             android:layout_height="wrap_content"
             android:text="@string/label_category"
             android:textColor="@color/primary_dark"
-            android:textSize="@dimen/text_size_xnormal"
+            android:textSize="@dimen/text_size_normal"
             android:textAllCaps="true"/>
 
         <TextView
             android:id="@+id/textview_product_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/label_category"
+            android:text="@string/label_product_name"
             android:maxLines="1"
             android:layout_marginTop="@dimen/margin_padding_small"
             android:textColor="@color/secondary_text"
@@ -33,5 +33,75 @@
 
 
     </LinearLayout>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/product_image_height">
+        
+        <ImageView
+            android:id="@+id/product_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/product_image_height"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/product_description"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/product_image_height"
+            android:background="@drawable/gradient_background_product" />
+
+        <TextView
+            android:id="@+id/textview_product_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="8dp"
+            android:background="@android:color/transparent"
+            android:text="$19.19"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_huge"/>
+
+        <ImageView
+            android:id="@+id/imageview_add_to_cart_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:src="@drawable/buy_48"
+            android:scaleType="center"
+            android:minHeight="36dp"
+            android:minWidth="64dp"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:orientation="vertical"
+            android:layout_alignBottom="@+id/imageview_add_to_cart_button"
+            android:layout_toLeftOf="@+id/textview_product_price"
+            android:layout_toStartOf="@+id/textview_product_price">
+
+            <TextView
+                android:id="@+id/textview_product_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:maxLines="2"
+                android:text=""
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_size_xtiny"/>
+
+        </LinearLayout>
+        
+    </RelativeLayout>
 
 </LinearLayout>
