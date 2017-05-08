@@ -17,4 +17,6 @@
     <string name="label_category">Category</string>
     <string name="label_product_name">Product Name</string>
     <string name="product_description">Product Image</string>
+    <string name="quantity">qty</string>
+    <string name="delete">Delete</string>
 </resources>
